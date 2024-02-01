@@ -1,79 +1,86 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native SIG IOSD-MAIT 
+---
 
-# Getting Started
+### Introduction to React Native
+###### [React Native Docs](https://reactnative.dev/docs/environment-setup)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+###### Pre-Requisites
+    Basics of Javascript
 
-## Step 1: Start the Metro Server
+###### Installation Guide
+[Reference Link for Installation](https://www.youtube.com/watch?v=8l691BQ-RGc&list=PLRAV69dS1uWSjBBJ-egNNOd4mdblt1P4c&index=3)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+* For Windows Install 
+    * [Node.js](https://nodejs.org/en/download/)  
+    * [java (openjdk)](https://learn.microsoft.com/en-us/java/openjdk/install)
+    * [Android Studio](https://developer.android.com/studio)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+* For Mac Install
+    * [Node.js](https://nodejs.org/en/download/)  
+    * [java (openjdk)](https://learn.microsoft.com/en-us/java/openjdk/install)
+    * [Android Studio](https://developer.android.com/studio)
+    * [Xcode](https://apps.apple.com/in/app/xcode/id497799835?mt=12)
 
-```bash
-# using npm
-npm start
+###### Install Chocolatey using Command Prompt as Administrator
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-# OR using Yarn
-yarn start
-```
+###### Install Node.js and OpenJDK using Chocolatey
+    choco install -y nodejs-lts microsoft-openjdk17
 
-## Step 2: Start your Application
+###### Android Studio Setup
+    Install Android SDK
+    Install Android Virtual Device
+    Set Environment Variables
+        -> ANDROID_HOME
+        -> JAVA_HOME
+        -> PATH
+    Create a new Virtual Device
+    Start the Virtual Device
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
 
-```bash
-# using npm
-npm run android
+###### Create a New React Native App
+    npx react-native@latest init AppName
 
-# OR using Yarn
-yarn android
-```
+###### Important files in React Native
+    App.js
+    index.js
+    package.json
+    package-lock.json
+    android
+    ios
 
-### For iOS
+###### Run the App
+    npm start
+    npx react-native run-android
+    npx react-native run-ios
 
-```bash
-# using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
-```
+###### React Native Components
+    View (Similar to div)
+    StyleSheet (Similar to CSS)
+    Text (Similar to p)
+    Image (Similar to img)
+    TextInput (Similar to input)
+    Button
+    TouchableOpacity (Similar to button)
+    ScrollView (Similar to div)
+    FlatList
+    StatusBar
+    SafeAreaView
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+###### Stylesheet Component
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: '#fff',
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+    });
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+###### Props
+    <Text style={{color: 'red'}}>Hello World</Text>
+    <Text style={styles.text}>Hello World</Text>
 
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
